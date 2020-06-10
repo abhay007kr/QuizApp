@@ -62,4 +62,15 @@
         android:background="@android:color/holo_red_light"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fake"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="fakelogin"
+        android:background="@android:color/holo_red_light"
+        />
+
 </LinearLayout>

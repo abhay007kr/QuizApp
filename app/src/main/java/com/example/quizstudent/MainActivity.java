@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button login,toRegisterActivity;
+    Button login,toRegisterActivity , fake;
     EditText loginEmail,loginPassword;
     TextView forgotPassword;
     private FirebaseAuth mAuth;
@@ -51,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
                 signIn();
             }
         });
+
+        //To remove Later
+        fake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AttemptActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initView()
@@ -61,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         toRegisterActivity = findViewById(R.id.to_register);
         mAuth = FirebaseAuth.getInstance();
         forgotPassword = findViewById(R.id.forgot_password);
+        fake = findViewById(R.id.fake);
     }
 
     void signIn()
